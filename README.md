@@ -7,7 +7,7 @@ Welcome to the **Sales & Marketing System** – a Django-based web application d
 ## 📸 Screenshots
 
 ### 🔐 Main Page
-![Main Page](screenshots/Register_page.png)
+![Main Page](screenshots/main_page.png)
 
 ### 🔐 Register Page
 ![Register Page](screenshots/Register_page.png)
@@ -16,7 +16,7 @@ Welcome to the **Sales & Marketing System** – a Django-based web application d
 ![Login Page](screenshots/Login_page.png)
 
 ### 🔐 Reset Password Page
-![Reset Page](screenshots/Reset_page.png)
+![Reset Page](screenshots/Reset_Password.png)
 
 ### 🧑‍💼 Admin Dashboard
 ![Admin Dashboard](screenshots/Dashboard_page.png)
