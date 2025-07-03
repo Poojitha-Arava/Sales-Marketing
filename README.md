@@ -7,7 +7,7 @@ Welcome to the **Sales & Marketing CRM System** – a Django-based web applicati
 ## 📸 Screenshots
 
 ### 🔐 Login Page
-![Login Page](screenshots/login.png)
+![Login Page](screenshots/Login page.png)
 
 ### 🧑‍💼 Admin Dashboard
 ![Admin Dashboard](screenshots/admin_dashboard.png)
