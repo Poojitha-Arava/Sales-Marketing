@@ -1,0 +1,121 @@
+{% extends 'accounts/base.html' %}
+{% block title %}Admin Dashboard{% endblock %}
+{% block content %}
+<style>
+  body {
+    margin: 0;
+    background: linear-gradient(to bottom right, #4a90e2, #7b4397); /* Unified color */
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  .dashboard-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: calc(100vh - 60px);
+    padding: 40px 20px;
+    box-sizing: border-box;
+  }
+
+  .dashboard-container {
+    width: 100%;
+    max-width: 960px;
+  }
+
+  h2 {
+    color: white;
+    font-size: 32px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .card {
+    background: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 14px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+  }
+
+  .card h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+
+  .card ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    line-height: 2;
+  }
+
+  .card ul li {
+    font-size: 16px;
+    color: #333;
+  }
+
+  .card ul li a {
+    color: #2c3e50;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .card ul li a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 26px;
+    }
+
+    .card {
+      padding: 20px;
+    }
+
+    .card h3 {
+      font-size: 18px;
+    }
+
+    .card ul li {
+      font-size: 15px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .dashboard-wrapper {
+      padding: 30px 10px;
+    }
+  }
+</style>
+
+<div class="dashboard-wrapper">
+  <div class="dashboard-container">
+    <h2>Welcome, Admin</h2>
+
+    <div class="card">
+      <h3>System Overview</h3>
+      <ul>
+        <li>👤 Total Users: 134</li>
+        <li>📦 Total Leads: 350</li>
+        <li>📈 Active Campaigns: 5</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Quick Actions</h3>
+      <ul>
+        <li><a href="#">🧑‍💼 Manage Users</a></li>
+        <li><a href="#">🧾 System Logs</a></li>
+        <li><a href="#">📊 Access Reports</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+{% endblock %}

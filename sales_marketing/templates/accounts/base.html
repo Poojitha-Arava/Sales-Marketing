@@ -1,0 +1,119 @@
+<!-- templates/accounts/base.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}Pooja Marketing Dashboard{% endblock %}</title>
+  <style>
+    :root {
+      --admin-color: #c0392b;
+      --sales-color: #27ae60;
+      --marketing-color: #8e44ad;
+      --analytics-color: #16a085;
+      --leads-color: #e67e22;
+      --default-color: #2c3e50;
+      --background: #f4f6f8;
+      --card-bg: #ffffff;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--background);
+    }
+
+    .navbar {
+      background-color: var(--default-color);
+      padding: 15px 30px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar .logo {
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .navbar .nav-links a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .navbar .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      padding: 40px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Role-specific background colors */
+    [data-page="admin"] .navbar { background-color: var(--admin-color); }
+    [data-page="sales"] .navbar { background-color: var(--sales-color); }
+    [data-page="marketing"] .navbar { background-color: var(--marketing-color); }
+    [data-page="analytics"] .navbar { background-color: var(--analytics-color); }
+    [data-page="leads"] .navbar { background-color: var(--leads-color); }
+
+    /* Button styling matching role themes */
+    [data-page="admin"] button {
+      background-color: var(--admin-color);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+    [data-page="sales"] button {
+      background-color: var(--sales-color);
+      color: white;
+    }
+    [data-page="marketing"] button {
+      background-color: var(--marketing-color);
+      color: white;
+    }
+    [data-page="analytics"] button {
+      background-color: var(--analytics-color);
+      color: white;
+    }
+    [data-page="leads"] button {
+      background-color: var(--leads-color);
+      color: white;
+    }
+    button:hover {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">🧭 Marketing Dashboard</div>
+    <div class="nav-links">
+      {% if request.user.is_authenticated %}
+        <span>👋 Hi, {{ request.user.username|capfirst }} ({{ request.user.role|capfirst }})</span>
+        <a href="{% url 'dashboard' %}">Dashboard</a>
+        <a href="{% url 'lead_management' %}">Leads</a>
+        <a href="{% url 'analytics' %}">Analytics</a>
+        <a href="{% url 'logout' %}">Logout</a>
+      {% else %}
+        <a href="{% url 'login' %}">Login</a>
+        <a href="{% url 'register' %}">Register</a>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="container" data-page="{% block page_role %}default{% endblock %}">
+    {% block content %}{% endblock %}
+  </div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!-- templates/accounts/sales_dashboard.html -->
+{% extends 'accounts/base.html' %}
+
+{% block title %}Sales Dashboard{% endblock %}
+
+{% block content %}
+<style>
+  body {
+    margin: 0;
+    background: linear-gradient(to bottom right, #4a90e2, #7b4397); /* 💎 Same as other pages */
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  h2 {
+    color: white;
+    font-size: 28px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .dashboard-container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+
+  .card {
+    background: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 14px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+  }
+
+  .card h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+  }
+
+  .card ul {
+    list-style: none;
+    padding-left: 0;
+    line-height: 2;
+  }
+
+  .card ul li {
+    font-size: 16px;
+    color: #444;
+  }
+
+  .card ul li a {
+    color: #2c3e50;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .card ul li a:hover {
+    text-decoration: underline;
+  }
+</style>
+
+<div class="dashboard-container">
+  <h2>Welcome, Sales Team</h2>
+
+  <div class="card">
+    <h3>Your Sales Performance</h3>
+    <ul>
+      <li>🛒 Deals Closed: 17</li>
+      <li>💰 Revenue Generated: ₹1,20,000</li>
+      <li>📈 Target Achieved: 89%</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Actions</h3>
+    <ul>
+      <li><a href="#">➕ Add New Lead</a></li>
+      <li><a href="#">📋 View Assigned Leads</a></li>
+      <li><a href="#">📞 Contact Clients</a></li>
+    </ul>
+  </div>
+</div>
+{% endblock %}

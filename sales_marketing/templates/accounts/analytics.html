@@ -1,0 +1,104 @@
+{% extends 'accounts/base.html' %}
+{% block title %}Analytics{% endblock %}
+{% block content %}
+<style>
+  body {
+    margin: 0;
+    background: linear-gradient(to bottom right, #4a90e2, #7b4397);
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  .analytics-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    min-height: calc(100vh - 60px);
+  }
+
+  .analytics-container {
+    width: 100%;
+    max-width: 1000px;
+  }
+
+  h2 {
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+
+  .card {
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+    padding: 30px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+  }
+
+  .card h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+
+  .card ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    line-height: 2;
+  }
+
+  .card ul li {
+    font-size: 16px;
+    color: #333;
+  }
+
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 24px;
+    }
+
+    .card {
+      padding: 20px;
+    }
+
+    .card h3 {
+      font-size: 18px;
+    }
+
+    .card ul li {
+      font-size: 15px;
+    }
+  }
+</style>
+
+<div class="analytics-wrapper">
+  <div class="analytics-container">
+    <h2>Analytics Dashboard</h2>
+
+    <div class="card">
+      <h3>Monthly Insights</h3>
+      <ul>
+        <li>📊 Total Leads: 500</li>
+        <li>📈 Conversion Rate: 28%</li>
+        <li>🕒 Avg Response Time: 4.2 hrs</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Channel Breakdown</h3>
+      <ul>
+        <li>🔹 Email: 180 leads</li>
+        <li>🔹 Social: 150 leads</li>
+        <li>🔹 Website: 170 leads</li>
+      </ul>
+    </div>
+  </div>
+</div>
+{% endblock %}

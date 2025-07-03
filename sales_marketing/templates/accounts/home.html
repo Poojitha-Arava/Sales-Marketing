@@ -1,0 +1,51 @@
+<!-- templates/accounts/home.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #3498db, #8e44ad);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .box {
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    }
+    h1 {
+      margin-bottom: 20px;
+      color: #2c3e50;
+    }
+    a {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 24px;
+      background: #2c3e50;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+    a:hover {
+      background: #1a252f;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>👩‍💼</h1>
+    <h1>Welcome to </h1>
+    <h2> Pooja Sales Marketing📈</h2>
+    <a href="{% url 'login' %}">Login</a>
+    <a href="{% url 'register' %}">Register</a>
+  </div>
+</body>
+</html>
