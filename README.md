@@ -1,22 +1,31 @@
 # 🧑‍💼 Sales & Marketing System
 
-Welcome to the **Sales & Marketing CRM System** – a Django-based web application designed to manage users, track sales activities, log marketing actions, and generate insights with a clean, professional UI.
+Welcome to the **Sales & Marketing System** – a Django-based web application designed to manage users, track sales activities, log marketing actions, and generate insights with a clean UI.
 
 ---
 
 ## 📸 Screenshots
 
+### 🔐 Main Page
+![Main Page](screenshots/Register_page.png)
+
+### 🔐 Register Page
+![Register Page](screenshots/Register_page.png)
+
 ### 🔐 Login Page
-![Login Page](screenshots/Login page.png)
+![Login Page](screenshots/Login_page.png)
+
+### 🔐 Reset Password Page
+![Reset Page](screenshots/Reset_page.png)
 
 ### 🧑‍💼 Admin Dashboard
-![Admin Dashboard](screenshots/admin_dashboard.png)
+![Admin Dashboard](screenshots/Dashboard_page.png)
 
-### 📈 Sales Dashboard
-![Sales Dashboard](screenshots/sales_dashboard.png)
+### 📈 Analytics Dashboard
+![Analytics Dashboard](screenshots/Analytics_page.png)
 
-### 📣 Marketing Dashboard
-![Marketing Dashboard](screenshots/marketing_dashboard.png)
+### 📣 Leads Dashboard
+![Marketing Dashboard](screenshots/Leads_page.png)
 
 ## 🚀 Features
 
@@ -47,3 +56,27 @@ Welcome to the **Sales & Marketing CRM System** – a Django-based web applicati
 ```bash
 git clone https://github.com/yourusername/sales_marketing.git
 cd sales_marketing
+
+Create a Virtual Environment
+bash
+python -m venv venv
+venv\Scripts\activate     # On Windows
+# OR
+source venv/bin/activate  # On Mac/Linux
+
+Install Dependencies
+bash
+pip install -r requirements.txt
+
+Apply Migrations
+bash
+python manage.py migrate
+
+Create Superuser
+bash
+python manage.py createsuperuser
+
+Run the Development Server
+bash
+python manage.py runserver
+
